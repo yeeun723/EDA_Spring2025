@@ -1,0 +1,9 @@
+#Ignore R Project files
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+#Ignore MacOS Finder file
+.DS_Store
