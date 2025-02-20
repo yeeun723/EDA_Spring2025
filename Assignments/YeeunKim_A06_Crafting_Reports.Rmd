@@ -84,7 +84,7 @@ Customize the chunk options such that the code is run but is not displayed in th
 summary_PM25 <- epa_data %>% 
   drop_na(PM2.5) %>% 
   group_by(COUNTY) %>% 
-  summarize(mean_PM2.5 = mean(PM2.5)) %>% 
+  summarize(mean_PM2.5 = round(mean(PM2.5), 2)) %>% 
   arrange(mean_PM2.5)
 
 #Compute mean ozone concentration for each county, sorted by value
@@ -92,7 +92,7 @@ summary_Ozone <- epa_data %>%
   drop_na(Ozone) %>% 
   group_by(COUNTY) %>% 
   summarize(
-    mean_Ozone = mean(Ozone)) %>% 
+    mean_Ozone = round(mean(Ozone),2)) %>% 
   arrange(mean_Ozone)
 
 #Use the `kable` function to produce the 2 tables in markdown format
@@ -154,3 +154,4 @@ print(epa_2019_box)
 Add a table of contents and list of figures to your document and knit to a PDF. Submit your PDF to Sakai, but also be sure to commit and push your Rmd file used to create this knit document to GitHub. In the section below, add a link to your GitHub repository.
 
 ## Git Repository
+<https://github.com/yeeun723/EDA_Spring2025.git>
